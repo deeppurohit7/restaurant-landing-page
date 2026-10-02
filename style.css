@@ -1,0 +1,710 @@
+/* ==========================================================================
+   1. Design System & Design Tokens
+   ========================================================================== */
+:root {
+  /* Warm Culinary Palette */
+  --color-base: #111411;         /* Deep olive obsidian */
+  --color-surface: #1a1e1a;      /* Muted forest card background */
+  --color-surface-hover: #232823;
+  --color-accent-amber: #d97706;  /* Saffron Gold */
+  --color-accent-terracotta: #c25e3d;
+  --color-sage: #9bb09f;          /* Earthy herbal sage */
+  --color-cream: #f6f3ee;         /* High-contrast ivory text */
+  --color-muted: #a3a8a3;
+  --color-border: rgba(246, 243, 238, 0.12);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --container-max: 1160px;
+  --radius-lg: 18px;
+  --radius-md: 10px;
+  --radius-sm: 6px;
+  --transition: 0.25s ease-in-out;
+}
+
+/* ==========================================================================
+   2. Reset & Global Styles
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-base);
+  color: var(--color-cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ==========================================================================
+   3. Navigation Header
+   ========================================================================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(17, 20, 17, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-cream);
+}
+
+.brand span {
+  color: var(--color-accent-amber);
+  font-style: italic;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.nav-links a:hover {
+  color: var(--color-cream);
+}
+
+.nav-btn {
+  background-color: var(--color-accent-amber);
+  color: #ffffff !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: background-color var(--transition);
+}
+
+.nav-btn:hover {
+  background-color: #b45309;
+}
+
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  /* Visual warmth with dark ambient lighting */
+  background: 
+    radial-gradient(circle at 75% 30%, rgba(217, 119, 6, 0.22) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(155, 176, 159, 0.12) 0%, transparent 50%),
+    linear-gradient(180deg, #111411 0%, #171c17 100%);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.sub-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--color-accent-amber);
+  background-color: rgba(217, 119, 6, 0.12);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--color-muted);
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* Button UI Components */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-accent-amber);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(217, 119, 6, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #b45309;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-border);
+  color: var(--color-cream);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-cream);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   5. General Section Typography
+   ========================================================================== */
+.section {
+  padding: 6.5rem 0;
+}
+
+.section-tag {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--color-accent-amber);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+}
+
+/* ==========================================================================
+   6. About Section
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.visual-card {
+  background: 
+    linear-gradient(135deg, rgba(217, 119, 6, 0.15) 0%, transparent 50%),
+    var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.culinary-badge {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.badge-year {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-accent-amber);
+}
+
+.badge-text {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-muted);
+}
+
+.quote-box p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--color-cream);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.quote-box span {
+  font-size: 0.9rem;
+  color: var(--color-sage);
+}
+
+.about-text p {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.highlights-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.mini-highlight strong {
+  display: block;
+  font-size: 1.4rem;
+  font-family: var(--font-serif);
+  color: var(--color-accent-amber);
+}
+
+.mini-highlight span {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+/* ==========================================================================
+   7. Pure CSS Menu Tabs Logic (The Radio Button Trick)
+   ========================================================================== */
+.menu-section {
+  background-color: var(--color-surface);
+}
+
+/* Hide actual radio inputs from view */
+input[name="menu-tab"] {
+  display: none;
+}
+
+.tab-labels {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.tab-label {
+  padding: 0.75rem 1.6rem;
+  background-color: var(--color-base);
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.tab-label:hover {
+  color: var(--color-cream);
+  border-color: rgba(246, 243, 238, 0.3);
+}
+
+/* Hide all panels by default */
+.menu-panel {
+  display: none;
+}
+
+/* When a specific radio is checked, display its matched panel & highlight label */
+#tab-starters:checked ~ .tab-labels label[for="tab-starters"],
+#tab-mains:checked ~ .tab-labels label[for="tab-mains"],
+#tab-desserts:checked ~ .tab-labels label[for="tab-desserts"] {
+  background-color: var(--color-accent-amber);
+  color: #ffffff;
+  border-color: var(--color-accent-amber);
+}
+
+#tab-starters:checked ~ .panel-starters,
+#tab-mains:checked ~ .panel-mains,
+#tab-desserts:checked ~ .panel-desserts {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.menu-item {
+  background-color: var(--color-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.menu-item:hover {
+  border-color: rgba(217, 119, 6, 0.4);
+  transform: translateY(-3px);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.65rem;
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 0.5rem;
+}
+
+.item-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-cream);
+}
+
+.item-price {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-accent-amber);
+  margin-left: 1rem;
+}
+
+.item-desc {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.diet-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.diet-tag.veg {
+  color: #34d399;
+  background-color: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.diet-tag.vegan {
+  color: #a78bfa;
+  background-color: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+}
+
+/* ==========================================================================
+   8. Experience Layout
+   ========================================================================== */
+.experience-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.experience-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+}
+
+.card-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent-amber);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.experience-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   9. Reservations Box & Form Architecture
+   ========================================================================== */
+.reservation-box {
+  background: 
+    radial-gradient(circle at 100% 0%, rgba(217, 119, 6, 0.12) 0%, transparent 50%),
+    var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 4rem;
+}
+
+.reservation-title {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.reservation-intro p {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-block p {
+  font-size: 0.9rem;
+  color: var(--color-cream);
+  margin-bottom: 0.6rem;
+}
+
+.info-block strong {
+  color: var(--color-accent-amber);
+}
+
+/* Form Styles */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-cream);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  background-color: var(--color-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent-amber);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
+}
+
+.submit-btn {
+  border: none;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   10. Footer
+   ========================================================================== */
+.footer {
+  background-color: #0b0e0b;
+  border-top: 1px solid var(--color-border);
+  padding-top: 4.5rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3.5rem;
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent-amber);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand p {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+  max-width: 380px;
+}
+
+.footer-details h4,
+.footer-contact h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-cream);
+}
+
+.footer-details p,
+.footer-contact p {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.75rem 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-link:hover {
+  color: var(--color-accent-amber);
+}
+
+/* ==========================================================================
+   11. Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 900px) {
+  .about-grid,
+  .reservation-box {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 1.75rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none; /* Mobile menu indicator */
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tab-labels {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tab-label {
+    text-align: center;
+  }
+
+  .bottom-row {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}

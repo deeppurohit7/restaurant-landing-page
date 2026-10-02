@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saffron & Sage - Artisan Culinary Lounge & Seasonal Dining Experience">
+  <title>Saffron & Sage | Modern Artisan Dining</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Playfair Display provides elegant editorial restaurant headings; Plus Jakarta Sans keeps body text readable -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="brand">Saffron <span>&</span> Sage</a>
+      <nav class="nav-links">
+        <a href="#about">Our Story</a>
+        <a href="#menu">Curated Menu</a>
+        <a href="#experience">The Experience</a>
+        <a href="#reservations" class="nav-btn">Reserve a Table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="sub-badge">Farm-to-Table Gastronomy</span>
+        <h1 class="hero-heading">Where Traditional Craft Meets Modern Palates</h1>
+        <p class="hero-description">
+          Experience seasonally sourced ingredients, aromatic wood-fired specialties, and curated botanical beverages in the heart of Gujarat.
+        </p>
+        <div class="hero-actions">
+          <a href="#reservations" class="btn btn-primary">Book an Evening</a>
+          <a href="#menu" class="btn btn-outline">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Chef Story Section -->
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-card visual-card">
+          <div class="culinary-badge">
+            <span class="badge-year">Est. 2024</span>
+            <span class="badge-text">Authentic Craft</span>
+          </div>
+          <div class="quote-box">
+            <p>"Cooking is honest storytelling through fire, earth, and patience."</p>
+            <span>— Head Chef Aravind Joshi</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-tag">Our Philosophy</span>
+          <h2 class="section-title">Rooted in Earth, Elevated by Fire</h2>
+          <p>
+            At Saffron & Sage, every dish is inspired by micro-seasonal harvests from regional farms. We combine slow clay-pot braising with modern precision cooking to honor time-tested heritage recipes.
+          </p>
+          <div class="highlights-row">
+            <div class="mini-highlight">
+              <strong>100%</strong>
+              <span>Locally Sourced</span>
+            </div>
+            <div class="mini-highlight">
+              <strong>Zero</strong>
+              <span>Artificial Additives</span>
+            </div>
+            <div class="mini-highlight">
+              <strong>Woodfired</strong>
+              <span>Clay Oven Breads</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Pure CSS Menu Section -->
+    <section id="menu" class="section menu-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Seasonal Offerings</span>
+          <h2 class="section-title">The Culinary Repertoire</h2>
+          <p class="section-subtitle">Crafted fresh daily with sustainably harvested local produce.</p>
+        </div>
+
+        <!-- Pure CSS Tab Switcher via Radio Buttons -->
+        <div class="menu-tabs-container">
+          <input type="radio" name="menu-tab" id="tab-starters" checked>
+          <input type="radio" name="menu-tab" id="tab-mains">
+          <input type="radio" name="menu-tab" id="tab-desserts">
+
+          <div class="tab-labels">
+            <label for="tab-starters" class="tab-label">Starters & Small Plates</label>
+            <label for="tab-mains" class="tab-label">Signature Mains</label>
+            <label for="tab-desserts" class="tab-label">Artisan Desserts</label>
+          </div>
+
+          <!-- Starters Panel -->
+          <div class="menu-panel panel-starters">
+            <div class="menu-grid">
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Charred Corn & Saffron Velouté</h3>
+                  <span class="item-price">₹420</span>
+                </div>
+                <p class="item-desc">Slow-roasted sweet corn reduction with Kashmiri saffron mist, toasted cumin oil, and sourdough crisp.</p>
+                <span class="diet-tag veg">Vegetarian</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Smoked Paneer Tikka Carpaccio</h3>
+                  <span class="item-price">₹480</span>
+                </div>
+                <p class="item-desc">Hickory-wood smoked cottage cheese ribbons, pickled radish discs, mint oil, and spiced pomegranate molasses.</p>
+                <span class="diet-tag veg">Chef's Signature</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Wild Forest Mushroom Galette</h3>
+                  <span class="item-price">₹540</span>
+                </div>
+                <p class="item-desc">Morels and shiitake ragout baked on a crisp puff pastry base with caramelized shallots and truffle emulsion.</p>
+                <span class="diet-tag vegan">Vegan</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Crispy Lotus Stem in Spiced Honey</h3>
+                  <span class="item-price">₹390</span>
+                </div>
+                <p class="item-desc">Wok-tossed lotus stem glazed in wild flower honey, toasted sesame seed brittle, and scallion ribbons.</p>
+                <span class="diet-tag veg">Gluten-Free</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- Mains Panel -->
+          <div class="menu-panel panel-mains">
+            <div class="menu-grid">
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Dum-Pukht Truffle Biryani</h3>
+                  <span class="item-price">₹750</span>
+                </div>
+                <p class="item-desc">Long-grain aged basmati rice layered with seasonal root vegetables, Persian saffron, black truffle butter, sealed with pastry dough.</p>
+                <span class="diet-tag veg">Signature Main</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Smoked Aubergine & Coconut Curry</h3>
+                  <span class="item-price">₹620</span>
+                </div>
+                <p class="item-desc">Wood-charred baby brinjals simmered in a spiced coconut and curry leaf velouté, served with red rice idiyappam.</p>
+                <span class="diet-tag vegan">Vegan</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Slow-Cooked Black Lentil Cream</h3>
+                  <span class="item-price">₹510</span>
+                </div>
+                <p class="item-desc">Twenty-four hour simmered black urad lentils, churned organic butter, fenugreek dust, and vine tomato glaze.</p>
+                <span class="diet-tag veg">Classic</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Heritage Stuffed Morels in Korma</h3>
+                  <span class="item-price">₹820</span>
+                </div>
+                <p class="item-desc">Himalayan morels filled with pistachio and goat cheese, swimming in a velvety cashew-white pepper gravy.</p>
+                <span class="diet-tag veg">Seasonal Special</span>
+              </article>
+            </div>
+          </div>
+
+          <!-- Desserts Panel -->
+          <div class="menu-panel panel-desserts">
+            <div class="menu-grid">
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Deconstructed Saffron Rasmalai</h3>
+                  <span class="item-price">₹450</span>
+                </div>
+                <p class="item-desc">Cured milk dumplings, saffron mousse quenelle, roasted pistachio crumble, and gold leaf dust.</p>
+                <span class="diet-tag veg">Signature Dessert</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Jaggery & Spiced Dark Chocolate Ganache</h3>
+                  <span class="item-price">₹480</span>
+                </div>
+                <p class="item-desc">70% Single-origin bean ganache infused with organic palm jaggery, sea salt flakes, and cardamom crisp.</p>
+                <span class="diet-tag veg">Vegetarian</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Cardamom & Fig Woodfired Kulfi</h3>
+                  <span class="item-price">₹380</span>
+                </div>
+                <p class="item-desc">Slow-reduced caramelized milk frozen kulfi rolled in candied dried figs and toasted almond flakes.</p>
+                <span class="diet-tag veg">Gluten-Free</span>
+              </article>
+
+              <article class="menu-item">
+                <div class="item-header">
+                  <h3 class="item-title">Rosewater & Lemongrass Sorbet</h3>
+                  <span class="item-price">₹340</span>
+                </div>
+                <p class="item-desc">Refreshing palate cleanser prepared from handpicked Kannauj rose extract and fresh garden lemongrass.</p>
+                <span class="diet-tag vegan">Vegan</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Atmosphere Section -->
+    <section id="experience" class="section experience-section">
+      <div class="container experience-layout">
+        <div class="experience-card">
+          <span class="card-num">01</span>
+          <h3>The Dining Room</h3>
+          <p>Hand-carved sandstone arches, warm amber acoustic lighting, and bespoke brass tableware created by master artisans.</p>
+        </div>
+        <div class="experience-card">
+          <span class="card-num">02</span>
+          <h3>Private Dining Alcoves</h3>
+          <p>Intimate courtyard cabanas tailored for celebratory dinners, business roundtables, and secluded culinary pairings.</p>
+        </div>
+        <div class="experience-card">
+          <span class="card-num">03</span>
+          <h3>Curated Cellar & Pairings</h3>
+          <p>Botanical zero-proof concoctions, artisanal kombuchas, and hand-brewed coffees from shade-grown estates.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="section reservation-section">
+      <div class="container">
+        <div class="reservation-box">
+          <div class="reservation-intro">
+            <span class="section-tag light">Book Your Table</span>
+            <h2 class="reservation-title">An Unhurried Evening Awaits</h2>
+            <p>Tables are reserved for up to two hours to allow for an unhurried, multisensory dining experience.</p>
+            <div class="info-block">
+              <p><strong>Hours:</strong> Tuesday – Sunday | 12:30 PM – 3:30 PM & 7:00 PM – 11:30 PM</p>
+              <p><strong>Dress Code:</strong> Smart Casual</p>
+              <p><strong>Direct Line:</strong> +91 98250 00000</p>
+            </div>
+          </div>
+
+          <!-- Reservation Form -->
+          <form class="reservation-form" onsubmit="event.preventDefault(); alert('Reservation submitted successfully! We will confirm via SMS shortly.');">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g. Deep Purohit">
+              </div>
+              <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="guests">Party Size</label>
+                <select id="guests" name="guests" required>
+                  <option value="2">2 Guests (Intimate Table)</option>
+                  <option value="4" selected>4 Guests (Dining Booth)</option>
+                  <option value="6">6 Guests (Courtyard Alcove)</option>
+                  <option value="8">8+ Guests (Private Room)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Reservation Date</label>
+                <input type="date" id="date" name="date" required value="2026-10-05">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time Slot</label>
+              <select id="time" name="time" required>
+                <option value="19:00">7:00 PM - Early Evening</option>
+                <option value="20:00" selected>8:00 PM - Prime Dining</option>
+                <option value="21:15">9:15 PM - Late Seating</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Dietary Notes or Occasion</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Special requests, allergies, or celebration details..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">Confirm Reservation Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">Saffron & Sage</span>
+        <p>Refined dining celebrating Indian botanicals, clay-pot traditions, and sustainable farming.</p>
+      </div>
+      <div class="footer-details">
+        <h4>Location</h4>
+        <p>Heritage Square, Near Ring Road</p>
+        <p>Junagadh / Ahmedabad, Gujarat, India</p>
+      </div>
+      <div class="footer-contact">
+        <h4>Inquiries</h4>
+        <p>reservations@saffronandsage.in</p>
+        <p>+91 (0) 285 262 0000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p>&copy; 2026 Saffron & Sage. Designed & Developed by Deep Purohit.</p>
+        <a href="#hero" class="top-link">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
